@@ -47,16 +47,20 @@
  */
 
 #include <string>
+#include <cassert>
+
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
+
 #include "MatlabIO.hpp"
 #include "MatlabIOContainer.hpp"
+
 using namespace cv;
 using namespace std;
 
 int main(int argc, char **argv) {
-
+    assert(argc > 1); 
     // get the Matlab .Mat file from the command line
     string filename(argv[1]);
     namedWindow("image");
